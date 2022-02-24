@@ -67,11 +67,10 @@ export default function TodoList() {
   useEffect(() => {
     const tempLocalStorage = localStorage.getItem("cardTodo");
     if (tempLocalStorage !== null) {
-      const obj = JSON.parse(tempLocalStorage); // object to string
+      const obj = JSON.parse(tempLocalStorage);
       setCard(obj);
     }
 
-    // console.log(obj);
   }, []);
 
   return (
@@ -107,7 +106,6 @@ export default function TodoList() {
               }}
               onChange={(e) => {
                 setDescription(e.target.value);
-                // console.log(Description);
               }}
             />
           </Form.Group>
@@ -117,7 +115,6 @@ export default function TodoList() {
           variant="primary"
           onClick={() => {
             handleSubmit();
-            // console.log(Description);
           }}
         >
           Add task

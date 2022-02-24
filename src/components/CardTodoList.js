@@ -33,7 +33,6 @@ function CardTodoList({
             <ListGroup.Item
               style={{
                 display: "flex",
-                // justifyContent: "space-between",
                 alignItems: "start",
               }}
               key={item + index}
@@ -83,7 +82,6 @@ function CardTodoList({
                 </>
               )}
 
-              {/* <div style={{ display: "flex" }}> */}
                 <Button
                   variant="warning"
                   size="sm"
@@ -95,7 +93,6 @@ function CardTodoList({
                 >
                   Edit
                 </Button>
-              {/* </div> */}
             </ListGroup.Item>
           ))}
         </ListGroup>
@@ -115,7 +112,7 @@ function CardTodoList({
                 type="text"
                 onKeyPress={(e) => {
                   if (e.key === "Enter") {
-                    e.preventDefault(); //ไม่ให้รีเฟรสเว็บ
+                    e.preventDefault();
                   }
                 }}
                 onChange={(e) => {
